@@ -295,6 +295,24 @@ function resetTime() {
   updateTime();
   saveData();
 }
+function resetAll() {
+    clearInterval(timer);
+    timer = null;
+    seconds = 0;
+    total = 0;
+
+    document.getElementById("time").innerText = "00:00:00";
+    document.getElementById("total").innerText = "0";
+
+    ["absent","intercom","front","talk","target","apo"].forEach(id => {
+        document.getElementById(id).innerText = "0";
+    });
+
+    document.getElementById("staff").value = "";
+    document.getElementById("area").value = "";
+
+    saveData();
+}
 </script>
 <button class="reset" onclick="resetAll()">
 🔄 リセット
