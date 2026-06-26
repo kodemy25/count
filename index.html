@@ -158,10 +158,6 @@ onclick="finishWork()">
 🔴 稼働終了
 </button>
 
-<button onclick="resetTime()">
-⏱️ 時間リセット
-</button>
-
 <div id="saveStatus">
 未保存
 </div>
@@ -285,17 +281,6 @@ el.innerText = num-1;
 if(total>0){
 total--;
 document.getElementById("total").innerText = total;
-}
-saveData();
-}
-
-}
-function resetTime() {
-  clearInterval(timer);
-  timer = null;
-  seconds = 0;
-  updateTime();
-  saveData();
 }
 function resetAll() {
     clearInterval(timer);
