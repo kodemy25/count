@@ -288,6 +288,13 @@ saveData();
 }
 
 }
+function resetTime() {
+  clearInterval(timer);
+  timer = null;
+  seconds = 0;
+  updateTime();
+  saveData();
+}
 </script>
 </body>
 </html>
