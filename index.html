@@ -134,7 +134,73 @@ onclick="minus('apo')">－</button>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+let total = 0;
+let timer = null;
+let seconds = 0;
+
+function updateTime(){
+
+const h = String(Math.floor(seconds/3600)).padStart(2,"0");
+const m = String(Math.floor((seconds%3600)/60)).padStart(2,"0");
+const s = String(seconds%60).padStart(2,"0");
+
+document.getElementById("time").innerText =
+`${h}:${m}:${s}`;
+
+}
+
+function startWork(){
+
+if(timer) return;
+
+timer = setInterval(function(){
+
+seconds++;
+updateTime();
+
+},1000);
+
+}
+
+function finishWork(){
+
+clearInterval(timer);
+timer = null;
+
+}
+
+function plus(id){
+
+const el = document.getElementById(id);
+
+el.innerText = Number(el.innerText)+1;
+
+total++;
+
+document.getElementById("total").innerText = total;
+
+}
+
+function minus(id){
+
+const el = document.getElementById(id);
+
+let num = Number(el.innerText);
+
+if(num>0){
+
+el.innerText = num-1;
+
+if(total>0){
+total--;
+document.getElementById("total").innerText = total;
+}
+
+}
+
+}
+</script>
 
 </body>
 </html>
