@@ -201,6 +201,32 @@ document.getElementById("total").innerText = total;
 
 }
 </script>
+<script>
+let total = 0;
+let timer = null;
+let seconds = 0;
 
+function updateTime() {
+  const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
+  const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
+  const s = String(seconds % 60).padStart(2, "0");
+  document.getElementById("time").innerText = `${h}:${m}:${s}`;
+}
+
+function startWork() {
+  if (timer) return;
+  timer = setInterval(() => {
+    seconds++;
+    updateTime();
+  }, 1000);
+}
+
+function stopWork() {
+  clearInterval(timer);
+  timer = null;
+}
+
+updateTime();
+</script>
 </body>
 </html>
