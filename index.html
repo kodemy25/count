@@ -285,53 +285,5 @@ saveData();
 
 }
 </script>
-<script>
-let total = 0;
-let timer = null;
-let seconds = 0;
-
-function updateTime() {
-  const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
-  const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
-  const s = String(seconds % 60).padStart(2, "0");
-  document.getElementById("time").innerText = `${h}:${m}:${s}`;
-}
-
-function startWork() {
-  if (timer) return;
-  timer = setInterval(() => {
-    seconds++;
-    updateTime();
-  }, 1000);
-}
-
-function stopWork() {
-  clearInterval(timer);
-  timer = null;
-}
-
-updateTime();
-window.addEventListener("beforeunload", () => {
-  localStorage.setItem("counterData", JSON.stringify({
-    total,
-    seconds,
-    staff: document.getElementById("staff").value,
-    area: document.getElementById("area").value
-  }));
-});
-
-const saved = JSON.parse(localStorage.getItem("counterData"));
-
-if (saved) {
-  total = saved.total || 0;
-  seconds = saved.seconds || 0;
-
-  document.getElementById("total").innerText = total;
-  document.getElementById("staff").value = saved.staff || "";
-  document.getElementById("area").value = saved.area || "";
-
-  updateTime();
-}
-</script>
 </body>
 </html>
