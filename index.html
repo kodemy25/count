@@ -130,7 +130,7 @@ background:#FF3B30;
 <div class="container">
 
 <div class="card">
-
+<div id="today"></div>
 <label>担当者</label>
 <select id="staff">
 <option value="">選択してください</option>
@@ -233,7 +233,11 @@ onclick="minus('apo')">－</button>
 let total = 0;
 let timer = null;
 let seconds = 0;
+const today = new Date();
+const week = ["日","月","火","水","木","金","土"];
 
+document.getElementById("today").innerText =
+`${today.getFullYear()}/${today.getMonth()+1}/${today.getDate()}（${week[today.getDay()]}）`;
 function updateTime(){
 
 const h = String(Math.floor(seconds/3600)).padStart(2,"0");
