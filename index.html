@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DoorCount</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>DoorCount</h1>
+
+<div class="card">
+
+<label>担当者</label>
+<select id="staff">
+<option value="">選択してください</option>
+<option>林</option>
+<option>村上</option>
+<option>亀田</option>
+<option>小寺</option>
+<option>海野</option>
+</select>
+
+<label>エリア</label>
+<input
+type="text"
+id="area"
+placeholder="例：新宿">
+
+<div class="summary">
+
+<h2>合計 <span id="total">0</span></h2>
+
+<div id="time">00:00:00</div>
+
+</div>
+
+<button
+class="start"
+onclick="startWork()">
+🟢 稼働開始
+</button>
+
+<button
+class="finish"
+onclick="finishWork()">
+🔴 稼働終了
+</button>
+
+<div id="saveStatus">
+未保存
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="item">
+<div class="title">🚪<br>不在</div>
+<div id="absent" class="count">0</div>
+<button onclick="plus('absent')">＋</button>
+<button class="minus"
+onclick="minus('absent')">－</button>
+</div>
+
+<div class="item">
+<div class="title">🔕<br>インターホンNG</div>
+<div id="intercom" class="count">0</div>
+<button onclick="plus('intercom')">＋</button>
+<button class="minus"
+onclick="minus('intercom')">－</button>
+</div>
+
+<div class="item">
+<div class="title">🚫<br>フロントNG</div>
+<div id="front" class="count">0</div>
+<button onclick="plus('front')">＋</button>
+<button class="minus"
+onclick="minus('front')">－</button>
+</div>
+
+<div class="item">
+<div class="title">💬<br>トーク後NG</div>
+<div id="talk" class="count">0</div>
+<button onclick="plus('talk')">＋</button>
+<button class="minus"
+onclick="minus('talk')">－</button>
+</div>
+
+<div class="item">
+<div class="title">❌<br>対象外</div>
+<div id="target" class="count">0</div>
+<button onclick="plus('target')">＋</button>
+<button class="minus"
+onclick="minus('target')">－</button>
+</div>
+
+<div class="item">
+<div class="title">✅<br>アポ</div>
+<div id="apo" class="count">0</div>
+<button onclick="plus('apo')">＋</button>
+<button class="minus"
+onclick="minus('apo')">－</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
