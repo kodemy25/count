@@ -23,10 +23,10 @@ button{border:none;border-radius:16px;font-size:20px;font-weight:800;padding:16p
 #status{text-align:center;color:var(--muted);font-weight:700;margin:14px 0 0}
 
 #grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.card{background:white;border-radius:20px;padding:14px 8px;text-align:center;box-shadow:0 10px 28px rgba(0,0,0,.06);min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
-.card h3{font-size:17px;margin:0;min-height:44px;display:flex;align-items:center;justify-content:center;line-height:1.25}
-.num{font-size:38px;font-weight:900;margin:0}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:white;border-radius:20px;padding:12px 8px;text-align:center;box-shadow:0 10px 28px rgba(0,0,0,.06);min-height:170px;display:flex;flex-direction:column;justify-content:space-between}
+.card h3{font-size:16px;margin:0;min-height:40px;display:flex;align-items:center;justify-content:center;line-height:1.2}
+.num{font-size:34px;font-weight:900;margin:0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .plus{background:var(--blue)}
 .minus{background:var(--red)}
 
