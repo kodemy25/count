@@ -96,6 +96,8 @@ function render(){
 
   $("staff").value = state.staff;
   $("area").value = state.area;
+  const info = todayInfo();
+$("todayText").textContent = `${info.date} (${info.weekday})`;
   $("total").textContent = state.total;
   $("time").textContent = formatTime(state.seconds);
 
