@@ -11,7 +11,7 @@ header a{background:#e5f0ff;color:#2f80ed;text-decoration:none;font-weight:700;p
 label{font-weight:700;color:var(--muted);font-size:16px}
 select,input{width:100%;margin-top:8px;padding:14px 12px;border:1px solid var(--line);border-radius:14px;font-size:17px;background:white}
 
-.summary{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
 .summary div{border:1px solid var(--line);border-radius:18px;padding:16px;text-align:center;background:white}
 .summary p{margin:0 0 8px;color:var(--muted);font-weight:700}
 .summary strong{font-size:32px}
