@@ -30,4 +30,4 @@ button{border:none;border-radius:16px;font-size:20px;font-weight:800;padding:14p
 .plus{background:var(--blue)}
 .minus{background:var(--red)}
 
-#reset{display:block;margin:26px auto 0;width:145px;background:white;color:#aaa;border:1px solid var(--line);font-size:16px;padding:12px;border-radius:16px}
+#reset{display:block;margin:26px auto 0;width:120px;background:white;color:#aaa;border:1px solid var(--line);font-size:15px;padding:10px;border-radius:16px}
