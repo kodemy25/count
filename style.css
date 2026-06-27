@@ -124,8 +124,8 @@ button:active{transform:scale(.97)}
 }
 .counter-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
 }
 .counter-card{
   padding:13px;
