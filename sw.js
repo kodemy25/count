@@ -1,4 +1,4 @@
-const CACHE_NAME = "count-app-v1";
+const CACHE_NAME = "count-app-v2";
 
 const FILES = [
   "./",
