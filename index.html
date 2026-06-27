@@ -1,75 +1,36 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#f5f5f7" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <title>Count</title>
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Count</title>
+<link rel="stylesheet" href="style.css?v=1">
+</head><body>
+<main>
+  <header>
+    <div id="today"></div>
+    <a href="history.html">履歴</a>
+  </header>
 
-  <link rel="manifest" href="manifest.json" />
-　<link rel="stylesheet" href="style.css?v=999" />
-</head>
+  <section class="panel">
+    <div class="form">
+      <label>担当者<select id="staff">
+        <option value="">選択してくださ</option><option>林</option><option>村上</option><option>亀田</option><option>小寺</option><option>海野</option>
+      </select></label>
+      <label>エリア<input id="area" placeholder="例：新宿"></label>
+    </div>
 
-<body>
-  <main class="app">
+    <div class="summary">
+      <div><p>合計</p><strong id="total">0</strong></div>
+      <div><p>稼働時間</p><strong id="time">00:00:00</strong></div>
+    </div>
 
-    <header class="topbar">
-      <div>
-        <p class="eyebrow" id="todayText">----</p>
-      </div>
+    <div class="actions">
+      <button id="start">稼働開始</button>
+      <button id="finish">稼働終了</button>
+    </div>
+    <p id="status">未保存</p>
+  </section>
 
-      <a href="history.html" class="link-button">履歴</a>
-    </header>
-
-    <section class="panel">
-
-      <div class="form-grid">
-        <label>
-          <span>担当者</span>
-          <select id="staff">
-            <option value="">選択してください</option>
-            <option>林</option>
-            <option>村上</option>
-            <option>亀田</option>
-            <option>小寺</option>
-            <option>海野</option>
-          </select>
-        </label>
-
-        <label>
-          <span>エリア</span>
-          <input type="text" id="area" placeholder="例：新宿" />
-        </label>
-      </div>
-
-      <div class="summary">
-        <div>
-          <p>合計</p>
-          <strong id="total">0</strong>
-        </div>
-
-        <div>
-          <p>稼働時間</p>
-          <strong id="time">00:00:00</strong>
-        </div>
-      </div>
-
-      <div class="main-actions">
-        <button class="primary" id="startBtn">稼働開始</button>
-        <button class="danger" id="finishBtn">稼働終了</button>
-      </div>
-
-      <p id="statusText" class="status">未保存</p>
-    </section>
-
-    <section class="counter-grid" id="counterGrid"></section>
-
-    <button class="reset" id="resetBtn">リセット</button>
-
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <section id="grid"></section>
+  <button id="reset">リセット</button>
+</main>
+<script src="script.js?v=1"></script>
+</body></html>
