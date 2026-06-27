@@ -142,7 +142,7 @@ button:active{transform:scale(.97)}
 }
 .counter-num{
   margin:7px 0 10px;
-  font-size:34px;
+  font-size:30px;
   font-weight:900;
   letter-spacing:-.05em;
 }
@@ -153,8 +153,8 @@ button:active{transform:scale(.97)}
 }
 .count-plus,.count-minus{
   color:#fff;
-  height:42px;
-  font-size:22px;
+  height:36px;
+  font-size:20px;
 }
 .count-plus{background:var(--blue)}
 .count-minus{background:var(--red)}
