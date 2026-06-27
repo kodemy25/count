@@ -19,7 +19,7 @@ body{
 .app{
   width:min(520px,100%);
   margin:0 auto;
-  padding:12px 12px 28px;
+  padding:4px 12px 20px;
 }
 .topbar{
   display:flex;
@@ -33,7 +33,7 @@ h1{
   letter-spacing:-.04em;
 }
 .eyebrow{
-  margin:0 0 3px;
+  margin:0;
   font-size:13px;
   color:var(--muted);
 }
