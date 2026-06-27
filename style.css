@@ -57,7 +57,8 @@ h1{
 }
 .form-grid{
   display:grid;
-  gap:10px;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:8px;
 }
 label span{
   display:block;
